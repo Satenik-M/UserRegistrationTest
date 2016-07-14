@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app = "userRegApp">
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
 </head>
-<body>
+<body ng-controller = "RegisterController">
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-3">
+            <form ng-submit = "addUser(user)" >
+
+                <div class="form-group">
+                    <label for="name">Fullname</label>
+                    <input type="text" id="name" ng-model="user.name"  class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" ng-model="user.email" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" ng-model="user.phone" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" ng-model="user.password" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+
+                    <input type="checkbox" id="isTasker" ng-model="user.isTasker" />
+                    <label for="isTasker">Become a Tasker</label>
+                </div>
+
+                <input type="submit" value="Register"/>
+
+
+                <!--imgURL:"../../img/1.jpg",-->
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/underscore-1.4.4.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/skrollr.min.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>
